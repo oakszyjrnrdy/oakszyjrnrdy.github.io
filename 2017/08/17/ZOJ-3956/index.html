@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目有$N$门课程，第$i$门课程有$2$个属性$H_i$和$C_i$ 。从$N$门课程中选择$m(m\leq0)$门课程,记为第$x_1,x_2,\cdots,x_m$门课程，使$a^2−a\times b−b^2$取最大值。 其中：$a:=\sum{i=1}^mH\{x_i} \quad b:=\sum{i=1}^mC\{x_i}$ 数据范围$1\leq N \leq 500 \quad 1">
+<meta name="description" content="题目有$N$门课程，第$i$门课程有$2$个属性$H_i$和$C_i$ 。从$N$门课程中选择$m(m\leq0)$门课程,记为第$x_1,x_2,\cdots,x_m$门课程，使$a^2−a\times b−b^2$取最大值。 其中：$a:=\sum{i=1}^mH\{x_i} \quad b:=\sum{i=1}^mC\{x_i}$">
 <meta name="keywords" content="ZOJ,01背包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ZOJ 3956">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/ZOJ-3956/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目有$N$门课程，第$i$门课程有$2$个属性$H_i$和$C_i$ 。从$N$门课程中选择$m(m\leq0)$门课程,记为第$x_1,x_2,\cdots,x_m$门课程，使$a^2−a\times b−b^2$取最大值。 其中：$a:=\sum{i=1}^mH\{x_i} \quad b:=\sum{i=1}^mC\{x_i}$ 数据范围$1\leq N \leq 500 \quad 1">
-<meta property="og:updated_time" content="2017-08-17T15:47:28.313Z">
+<meta property="og:description" content="题目有$N$门课程，第$i$门课程有$2$个属性$H_i$和$C_i$ 。从$N$门课程中选择$m(m\leq0)$门课程,记为第$x_1,x_2,\cdots,x_m$门课程，使$a^2−a\times b−b^2$取最大值。 其中：$a:=\sum{i=1}^mH\{x_i} \quad b:=\sum{i=1}^mC\{x_i}$">
+<meta property="og:updated_time" content="2017-08-17T19:25:17.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZOJ 3956">
-<meta name="twitter:description" content="题目有$N$门课程，第$i$门课程有$2$个属性$H_i$和$C_i$ 。从$N$门课程中选择$m(m\leq0)$门课程,记为第$x_1,x_2,\cdots,x_m$门课程，使$a^2−a\times b−b^2$取最大值。 其中：$a:=\sum{i=1}^mH\{x_i} \quad b:=\sum{i=1}^mC\{x_i}$ 数据范围$1\leq N \leq 500 \quad 1">
+<meta name="twitter:description" content="题目有$N$门课程，第$i$门课程有$2$个属性$H_i$和$C_i$ 。从$N$门课程中选择$m(m\leq0)$门课程,记为第$x_1,x_2,\cdots,x_m$门课程，使$a^2−a\times b−b^2$取最大值。 其中：$a:=\sum{i=1}^mH\{x_i} \quad b:=\sum{i=1}^mC\{x_i}$">
 
 
 
@@ -377,6 +377,7 @@
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>有$N$门课程，第$i$门课程有$2$个属性$H_i$和$C_i$ 。从$N$门课程中选择$m(m\leq0)$门课程,记为第$x_1,x_2,\cdots,x_m$门课程，使$a^2−a\times b−b^2$取最大值。</p>
 <p>其中：$a:=\sum<em>{i=1}^mH\</em>{x_i} \quad b:=\sum<em>{i=1}^mC\</em>{x_i}$</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1\leq N \leq 500 \quad 1 \leq H_i \leq 10000 \quad 1 \leq C_i \leq 100$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>感觉是DP，但是定义$dp[i]:=$前$i$门中所能得到的最大值，推了一下发现并不满足最优性原理，也不是多段决策。</p>
 <p>注意到，$C$的范围很小。考虑将$C$也当作状态的一维。</p>

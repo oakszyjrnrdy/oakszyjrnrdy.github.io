@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目从N个数中选3个，能组成三角形的方案数有多少。 数据范围$3\leq N \leq 10^5$ $1\leq  数的大小 \leq 10^5$ 做法因为数的大小不超过$10^5$，所以可以用num[i]表示长度为i的数有多少个。用FFT求出num数组与自身的卷积，此卷积的第i个数即是“任意取2个数，长度为i的方案数”。而这里面包含了同一个数选2次的方案，要减去。这里面第一次选a和第二次选b与第">
+<meta name="description" content="题目从N个数中选3个，能组成三角形的方案数有多少。">
 <meta name="keywords" content="FFT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDOJ 4609">
 <meta property="og:url" content="http://yoursite.com/2017/05/30/HDOJ-4609/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目从N个数中选3个，能组成三角形的方案数有多少。 数据范围$3\leq N \leq 10^5$ $1\leq  数的大小 \leq 10^5$ 做法因为数的大小不超过$10^5$，所以可以用num[i]表示长度为i的数有多少个。用FFT求出num数组与自身的卷积，此卷积的第i个数即是“任意取2个数，长度为i的方案数”。而这里面包含了同一个数选2次的方案，要减去。这里面第一次选a和第二次选b与第">
-<meta property="og:updated_time" content="2017-05-31T08:18:49.602Z">
+<meta property="og:description" content="题目从N个数中选3个，能组成三角形的方案数有多少。">
+<meta property="og:updated_time" content="2017-08-17T19:23:11.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDOJ 4609">
-<meta name="twitter:description" content="题目从N个数中选3个，能组成三角形的方案数有多少。 数据范围$3\leq N \leq 10^5$ $1\leq  数的大小 \leq 10^5$ 做法因为数的大小不超过$10^5$，所以可以用num[i]表示长度为i的数有多少个。用FFT求出num数组与自身的卷积，此卷积的第i个数即是“任意取2个数，长度为i的方案数”。而这里面包含了同一个数选2次的方案，要减去。这里面第一次选a和第二次选b与第">
+<meta name="twitter:description" content="题目从N个数中选3个，能组成三角形的方案数有多少。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>从N个数中选3个，能组成三角形的方案数有多少。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$3\leq N \leq 10^5$</p>
 <p>$1\leq  数的大小 \leq 10^5$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>因为数的大小不超过$10^5$，所以可以用num[i]表示长度为i的数有多少个。用FFT求出num数组与自身的卷积，此卷积的第i个数即是“任意取2个数，长度为i的方案数”。而这里面包含了同一个数选2次的方案，要减去。这里面第一次选a和第二次选b与第一次选b和第二次选a算做了不同的方案，所以要将所有方案数/2。</p>

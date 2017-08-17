@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目有一个长度为N的数列，每个数不超过$10^9$，顺序给出$M$个操作以及对应操作的结果。要求还原出那个数列，若有多个数列满足条件，输出每个数按位或的值最大的那个数列。原数列可能不存在。 操作有2种：第一种：$l,r,x$。代表原数列下标在$[l,r]$范围内的最大的数为$x$。题目保证每个$x$都不相同。第二种：$k,d$。代表将原数列中第$k$个数改为$d$。 数据范围$1 \leq N,">
+<meta name="description" content="题目有一个长度为N的数列，每个数不超过$10^9$，顺序给出$M$个操作以及对应操作的结果。要求还原出那个数列，若有多个数列满足条件，输出每个数按位或的值最大的那个数列。原数列可能不存在。 操作有2种：第一种：$l,r,x$。代表原数列下标在$[l,r]$范围内的最大的数为$x$。题目保证每个$x$都不相同。第二种：$k,d$。代表将原数列中第$k$个数改为$d$。">
 <meta name="keywords" content="线段树,Codeforces">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 796F">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/Codeforces-796F/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目有一个长度为N的数列，每个数不超过$10^9$，顺序给出$M$个操作以及对应操作的结果。要求还原出那个数列，若有多个数列满足条件，输出每个数按位或的值最大的那个数列。原数列可能不存在。 操作有2种：第一种：$l,r,x$。代表原数列下标在$[l,r]$范围内的最大的数为$x$。题目保证每个$x$都不相同。第二种：$k,d$。代表将原数列中第$k$个数改为$d$。 数据范围$1 \leq N,">
-<meta property="og:updated_time" content="2017-08-17T14:48:59.139Z">
+<meta property="og:description" content="题目有一个长度为N的数列，每个数不超过$10^9$，顺序给出$M$个操作以及对应操作的结果。要求还原出那个数列，若有多个数列满足条件，输出每个数按位或的值最大的那个数列。原数列可能不存在。 操作有2种：第一种：$l,r,x$。代表原数列下标在$[l,r]$范围内的最大的数为$x$。题目保证每个$x$都不相同。第二种：$k,d$。代表将原数列中第$k$个数改为$d$。">
+<meta property="og:updated_time" content="2017-08-17T19:21:41.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 796F">
-<meta name="twitter:description" content="题目有一个长度为N的数列，每个数不超过$10^9$，顺序给出$M$个操作以及对应操作的结果。要求还原出那个数列，若有多个数列满足条件，输出每个数按位或的值最大的那个数列。原数列可能不存在。 操作有2种：第一种：$l,r,x$。代表原数列下标在$[l,r]$范围内的最大的数为$x$。题目保证每个$x$都不相同。第二种：$k,d$。代表将原数列中第$k$个数改为$d$。 数据范围$1 \leq N,">
+<meta name="twitter:description" content="题目有一个长度为N的数列，每个数不超过$10^9$，顺序给出$M$个操作以及对应操作的结果。要求还原出那个数列，若有多个数列满足条件，输出每个数按位或的值最大的那个数列。原数列可能不存在。 操作有2种：第一种：$l,r,x$。代表原数列下标在$[l,r]$范围内的最大的数为$x$。题目保证每个$x$都不相同。第二种：$k,d$。代表将原数列中第$k$个数改为$d$。">
 
 
 
@@ -377,6 +377,7 @@
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>有一个长度为N的数列，每个数不超过$10^9$，顺序给出$M$个操作以及对应操作的结果。要求还原出那个数列，若有多个数列满足条件，输出每个数按位或的值最大的那个数列。原数列可能不存在。</p>
 <p>操作有2种：<br>第一种：$l,r,x$。代表原数列下标在$[l,r]$范围内的最大的数为$x$。题目保证每个$x$都不相同。<br>第二种：$k,d$。代表将原数列中第$k$个数改为$d$。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1 \leq N, M, \leq 3 \times 10^5 \quad 0 \leq x \leq 10^9$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>对于此题，我们似乎做不了别的，只能求出满足条件的原数列中的每个数的最大值。（这可以用线段树在$O(M\times log_2N)O(M\times log_2N)$的时间内求出。）</p>
 <p>将此数列当作原数列，对其进行$M$个操作。我们发现，若第$i$次操作的结果比所给结果小，那么原数列不存在，因为原数列中的数已经不可能更大了。若操作结果比所给结果大，那么原数列也不存在（此时是操作之间有矛盾）。</p>

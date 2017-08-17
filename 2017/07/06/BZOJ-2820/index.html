@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目$T$个询问，每个询问求有多少对$(x,y)$使得$gcd(x,y)$是质数，其中$1 \leq x \leq N \quad 1 \leq y \leq M$。 数据范围$T \leq 10^4 \quad N,M \leq 10^7$ 做法所求为：$$\sum{p是质数}\sum{x=1}^N \sum_{y=1}^M [gcd(x,y)==p]$$ 显然可转化为:$$\sum{p是质数}">
+<meta name="description" content="题目$T$个询问，每个询问求有多少对$(x,y)$使得$gcd(x,y)$是质数，其中$1 \leq x \leq N \quad 1 \leq y \leq M$。">
 <meta name="keywords" content="BZOJ,莫比乌斯反演">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ 2820">
 <meta property="og:url" content="http://yoursite.com/2017/07/06/BZOJ-2820/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目$T$个询问，每个询问求有多少对$(x,y)$使得$gcd(x,y)$是质数，其中$1 \leq x \leq N \quad 1 \leq y \leq M$。 数据范围$T \leq 10^4 \quad N,M \leq 10^7$ 做法所求为：$$\sum{p是质数}\sum{x=1}^N \sum_{y=1}^M [gcd(x,y)==p]$$ 显然可转化为:$$\sum{p是质数}">
-<meta property="og:updated_time" content="2017-07-06T15:25:05.500Z">
+<meta property="og:description" content="题目$T$个询问，每个询问求有多少对$(x,y)$使得$gcd(x,y)$是质数，其中$1 \leq x \leq N \quad 1 \leq y \leq M$。">
+<meta property="og:updated_time" content="2017-08-17T19:19:44.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ 2820">
-<meta name="twitter:description" content="题目$T$个询问，每个询问求有多少对$(x,y)$使得$gcd(x,y)$是质数，其中$1 \leq x \leq N \quad 1 \leq y \leq M$。 数据范围$T \leq 10^4 \quad N,M \leq 10^7$ 做法所求为：$$\sum{p是质数}\sum{x=1}^N \sum_{y=1}^M [gcd(x,y)==p]$$ 显然可转化为:$$\sum{p是质数}">
+<meta name="twitter:description" content="题目$T$个询问，每个询问求有多少对$(x,y)$使得$gcd(x,y)$是质数，其中$1 \leq x \leq N \quad 1 \leq y \leq M$。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>$T$个询问，每个询问求有多少对$(x,y)$使得$gcd(x,y)$是质数，其中$1 \leq x \leq N \quad 1 \leq y \leq M$。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$T \leq 10^4 \quad N,M \leq 10^7$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>所求为：<br>$$<br>\sum<em>{p是质数}\sum</em>{x=1}^N \sum_{y=1}^M [gcd(x,y)==p]<br>$$</p>
 <p>显然可转化为:<br>$$<br>\sum<em>{p是质数} \sum</em>{x=1}^{N’} \sum_{y=1}^{M’}[gcd(x,y)==1] \quad \quad N’=\frac{N}{p} \quad M’=\frac{M}{P}<br>$$</p>

@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给出$T$个询问$(a,b,c,d,K)$，每次求有多少个数对$(x,y)$的gcd等于$K$，其中$a \leq x \leq b \quad c \leq y \leq d$。 数据范围$0 \leq T, a, b, c, d, K \leq 50000$ 做法显然，可用容斥定理将问题转化为：有多少对$(x,y)$的gcd等于$K$，其中$1 \leq x \leq n \quad 1">
+<meta name="description" content="题目给出$T$个询问$(a,b,c,d,K)$，每次求有多少个数对$(x,y)$的gcd等于$K$，其中$a \leq x \leq b \quad c \leq y \leq d$。">
 <meta name="keywords" content="BZOJ,莫比乌斯反演">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ 2301">
 <meta property="og:url" content="http://yoursite.com/2017/07/05/BZOJ-2301/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给出$T$个询问$(a,b,c,d,K)$，每次求有多少个数对$(x,y)$的gcd等于$K$，其中$a \leq x \leq b \quad c \leq y \leq d$。 数据范围$0 \leq T, a, b, c, d, K \leq 50000$ 做法显然，可用容斥定理将问题转化为：有多少对$(x,y)$的gcd等于$K$，其中$1 \leq x \leq n \quad 1">
-<meta property="og:updated_time" content="2017-07-05T11:41:30.035Z">
+<meta property="og:description" content="题目给出$T$个询问$(a,b,c,d,K)$，每次求有多少个数对$(x,y)$的gcd等于$K$，其中$a \leq x \leq b \quad c \leq y \leq d$。">
+<meta property="og:updated_time" content="2017-08-17T19:19:32.873Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ 2301">
-<meta name="twitter:description" content="题目给出$T$个询问$(a,b,c,d,K)$，每次求有多少个数对$(x,y)$的gcd等于$K$，其中$a \leq x \leq b \quad c \leq y \leq d$。 数据范围$0 \leq T, a, b, c, d, K \leq 50000$ 做法显然，可用容斥定理将问题转化为：有多少对$(x,y)$的gcd等于$K$，其中$1 \leq x \leq n \quad 1">
+<meta name="twitter:description" content="题目给出$T$个询问$(a,b,c,d,K)$，每次求有多少个数对$(x,y)$的gcd等于$K$，其中$a \leq x \leq b \quad c \leq y \leq d$。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给出$T$个询问$(a,b,c,d,K)$，每次求有多少个数对$(x,y)$的gcd等于$K$，其中$a \leq x \leq b \quad c \leq y \leq d$。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$0 \leq T, a, b, c, d, K \leq 50000$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>显然，可用容斥定理将问题转化为：有多少对$(x,y)$的gcd等于$K$，其中$1 \leq x \leq n \quad 1 \leq y \leq m$。</p>
 <p>问题可继续转化为：有多少对$(x,y)$的gcd等于1，其中$1 \leq x \leq n’ = \lfloor \frac{n}{K} \rfloor \quad 1 \leq y \leq m’ = \lfloor \frac{m}{K} \rfloor$</p>

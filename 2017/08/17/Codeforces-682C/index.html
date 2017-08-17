@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给一棵$N$个节点的树，节点$i$有点权$a_i$。每条边有边权$b_i$。对于节点$u$，如果$u$的子树中存在节点$v$使得$dist(u,v)&amp;gt;a_v$的话，$u$就具有性质$P$。问：最少删去多少个节点，使得剩下的树中没有节点具有性质$P$。其中$dist(u,v):=$$u$到$v$的边权之和。 数据范围$1\leq N \leq 10^5$ 做法对于$2$个节点$(u,v)$">
+<meta name="description" content="题目给一棵$N$个节点的树，节点$i$有点权$a_i$。每条边有边权$b_i$。对于节点$u$，如果$u$的子树中存在节点$v$使得$dist(u,v)&amp;gt;a_v$的话，$u$就具有性质$P$。问：最少删去多少个节点，使得剩下的树中没有节点具有性质$P$。其中$dist(u,v):=$$u$到$v$的边权之和。">
 <meta name="keywords" content="Codeforces,DFS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 682C">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/Codeforces-682C/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给一棵$N$个节点的树，节点$i$有点权$a_i$。每条边有边权$b_i$。对于节点$u$，如果$u$的子树中存在节点$v$使得$dist(u,v)&amp;gt;a_v$的话，$u$就具有性质$P$。问：最少删去多少个节点，使得剩下的树中没有节点具有性质$P$。其中$dist(u,v):=$$u$到$v$的边权之和。 数据范围$1\leq N \leq 10^5$ 做法对于$2$个节点$(u,v)$">
-<meta property="og:updated_time" content="2017-08-17T15:32:13.954Z">
+<meta property="og:description" content="题目给一棵$N$个节点的树，节点$i$有点权$a_i$。每条边有边权$b_i$。对于节点$u$，如果$u$的子树中存在节点$v$使得$dist(u,v)&amp;gt;a_v$的话，$u$就具有性质$P$。问：最少删去多少个节点，使得剩下的树中没有节点具有性质$P$。其中$dist(u,v):=$$u$到$v$的边权之和。">
+<meta property="og:updated_time" content="2017-08-17T19:20:14.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 682C">
-<meta name="twitter:description" content="题目给一棵$N$个节点的树，节点$i$有点权$a_i$。每条边有边权$b_i$。对于节点$u$，如果$u$的子树中存在节点$v$使得$dist(u,v)&amp;gt;a_v$的话，$u$就具有性质$P$。问：最少删去多少个节点，使得剩下的树中没有节点具有性质$P$。其中$dist(u,v):=$$u$到$v$的边权之和。 数据范围$1\leq N \leq 10^5$ 做法对于$2$个节点$(u,v)$">
+<meta name="twitter:description" content="题目给一棵$N$个节点的树，节点$i$有点权$a_i$。每条边有边权$b_i$。对于节点$u$，如果$u$的子树中存在节点$v$使得$dist(u,v)&amp;gt;a_v$的话，$u$就具有性质$P$。问：最少删去多少个节点，使得剩下的树中没有节点具有性质$P$。其中$dist(u,v):=$$u$到$v$的边权之和。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给一棵$N$个节点的树，节点$i$有点权$a_i$。每条边有边权$b_i$。对于节点$u$，如果$u$的子树中存在节点$v$使得$dist(u,v)&gt;a_v$的话，$u$就具有性质$P$。问：最少删去多少个节点，使得剩下的树中没有节点具有性质$P$。其中$dist(u,v):=$$u$到$v$的边权之和。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1\leq N \leq 10^5$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>对于$2$个节点$(u,v)$（$u$是$v$的祖先），如果$dist(u,v)&gt;a_v$，必须删去以u到v的某个点为根的子树。为了删去最少，显然删去以$v$为根的子树。</p>
 <p>$dist(u,v)=dist(1,v)−dist(1,u)$，所以我们处理出根到每个节点的距离即可。但是枚举任意2个点$uv$复杂度太高，我们可以在$dfs$的时候，维护一个min_dist(从根节点到当前节点距离的最小值)。</p>

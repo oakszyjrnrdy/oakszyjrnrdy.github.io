@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="题目给一颗树，$N$个点，$N-1$条边。有$K$个警察局，第$i$个警察局在点$p_i$上。 性质$P$定义为：对任意点$v$，存在警察局$u$，使得$dist(u,v)\leq D$ 。 初始的图满足性质$P$。 问：最多删除哪些边使得图仍然满足性质$P$。 数据范围$2\leq N \leq 3\times 10^5\quad 1 \leq K \leq 3 \times 10^5 \qua">
+<meta name="description" content="题目给一颗树，$N$个点，$N-1$条边。有$K$个警察局，第$i$个警察局在点$p_i$上。 性质$P$定义为：对任意点$v$，存在警察局$u$，使得$dist(u,v)\leq D$ 。 初始的图满足性质$P$。 问：最多删除哪些边使得图仍然满足性质$P$。">
 <meta name="keywords" content="Codeforces,BFS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 796D">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/Codeforces-796D/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给一颗树，$N$个点，$N-1$条边。有$K$个警察局，第$i$个警察局在点$p_i$上。 性质$P$定义为：对任意点$v$，存在警察局$u$，使得$dist(u,v)\leq D$ 。 初始的图满足性质$P$。 问：最多删除哪些边使得图仍然满足性质$P$。 数据范围$2\leq N \leq 3\times 10^5\quad 1 \leq K \leq 3 \times 10^5 \qua">
+<meta property="og:description" content="题目给一颗树，$N$个点，$N-1$条边。有$K$个警察局，第$i$个警察局在点$p_i$上。 性质$P$定义为：对任意点$v$，存在警察局$u$，使得$dist(u,v)\leq D$ 。 初始的图满足性质$P$。 问：最多删除哪些边使得图仍然满足性质$P$。">
 <meta property="og:image" content="http://imglf.nosdn.127.net/img/b0pmUXJIb2RvdXEwVUVMTFp3Sm1LNlR1cytRZ04wQTZYQ0JlYXo5Nnh0M0VRejBBVFQvVzB3PT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
-<meta property="og:updated_time" content="2017-08-17T15:13:24.164Z">
+<meta property="og:updated_time" content="2017-08-17T19:21:28.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 796D">
-<meta name="twitter:description" content="题目给一颗树，$N$个点，$N-1$条边。有$K$个警察局，第$i$个警察局在点$p_i$上。 性质$P$定义为：对任意点$v$，存在警察局$u$，使得$dist(u,v)\leq D$ 。 初始的图满足性质$P$。 问：最多删除哪些边使得图仍然满足性质$P$。 数据范围$2\leq N \leq 3\times 10^5\quad 1 \leq K \leq 3 \times 10^5 \qua">
+<meta name="twitter:description" content="题目给一颗树，$N$个点，$N-1$条边。有$K$个警察局，第$i$个警察局在点$p_i$上。 性质$P$定义为：对任意点$v$，存在警察局$u$，使得$dist(u,v)\leq D$ 。 初始的图满足性质$P$。 问：最多删除哪些边使得图仍然满足性质$P$。">
 <meta name="twitter:image" content="http://imglf.nosdn.127.net/img/b0pmUXJIb2RvdXEwVUVMTFp3Sm1LNlR1cytRZ04wQTZYQ0JlYXo5Nnh0M0VRejBBVFQvVzB3PT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
 
 
@@ -381,6 +381,7 @@
 <p>性质$P$定义为：对任意点$v$，存在警察局$u$，使得$dist(u,v)\leq D$ 。</p>
 <p>初始的图满足性质$P$。</p>
 <p>问：最多删除哪些边使得图仍然满足性质$P$。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$2\leq N \leq 3\times 10^5\quad 1 \leq K \leq 3 \times 10^5 \quad 0\leq D \leq N-1$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>先考虑最多能删除多少边。在树上，每删除一条边，就多一个连通块。为了满足性质$P$，显然最多只能有$K_{real}$个连通块。其中，$K_{real}$为其上有警察局的节点的个数。这点容易反证得出。由此，我们得出了删除的边数的一个上界是$K_{real}−1$ 。</p>
 <p>现在考虑如何删。由于初始图满足性质$P$，所以每个点到距其最近的警察局的距离$\leq D$。于是，我们只要保证每个点能够到达距其最近的警察局即可，其余的边都删掉。这样，我们便将树分成了$K_{real}$个连通块，也即删去了$K_{real}-1$条边。</p>

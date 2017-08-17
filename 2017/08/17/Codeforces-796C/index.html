@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给一颗$N$个节点的树，节点$i$有权值$a_i$。第一次可以随意删除一个节点i，费用为$a_i$，并且与$a_i$距离为$1$的节点$j$的权值$$a_j增加$1$,与$i$距离为$2$的节点$K$的权值$$a_k增加$2$。之后删除的点必须与某个已被删除的点距离为$1$，其余删除规则与第一次一样。问：删除所有的点，费用的最大值的最小值是多少？ 数据范围$1 \leq N \leq 3 \t">
+<meta name="description" content="题目给一颗$N$个节点的树，节点$i$有权值$a_i$。第一次可以随意删除一个节点i，费用为$a_i$，并且与$a_i$距离为$1$的节点$j$的权值$$a_j增加$1$,与$i$距离为$2$的节点$K$的权值$$a_k增加$2$。之后删除的点必须与某个已被删除的点距离为$1$，其余删除规则与第一次一样。问：删除所有的点，费用的最大值的最小值是多少？">
 <meta name="keywords" content="Codeforces">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 796C">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/Codeforces-796C/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给一颗$N$个节点的树，节点$i$有权值$a_i$。第一次可以随意删除一个节点i，费用为$a_i$，并且与$a_i$距离为$1$的节点$j$的权值$$a_j增加$1$,与$i$距离为$2$的节点$K$的权值$$a_k增加$2$。之后删除的点必须与某个已被删除的点距离为$1$，其余删除规则与第一次一样。问：删除所有的点，费用的最大值的最小值是多少？ 数据范围$1 \leq N \leq 3 \t">
-<meta property="og:updated_time" content="2017-08-17T15:02:04.034Z">
+<meta property="og:description" content="题目给一颗$N$个节点的树，节点$i$有权值$a_i$。第一次可以随意删除一个节点i，费用为$a_i$，并且与$a_i$距离为$1$的节点$j$的权值$$a_j增加$1$,与$i$距离为$2$的节点$K$的权值$$a_k增加$2$。之后删除的点必须与某个已被删除的点距离为$1$，其余删除规则与第一次一样。问：删除所有的点，费用的最大值的最小值是多少？">
+<meta property="og:updated_time" content="2017-08-17T19:21:14.470Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 796C">
-<meta name="twitter:description" content="题目给一颗$N$个节点的树，节点$i$有权值$a_i$。第一次可以随意删除一个节点i，费用为$a_i$，并且与$a_i$距离为$1$的节点$j$的权值$$a_j增加$1$,与$i$距离为$2$的节点$K$的权值$$a_k增加$2$。之后删除的点必须与某个已被删除的点距离为$1$，其余删除规则与第一次一样。问：删除所有的点，费用的最大值的最小值是多少？ 数据范围$1 \leq N \leq 3 \t">
+<meta name="twitter:description" content="题目给一颗$N$个节点的树，节点$i$有权值$a_i$。第一次可以随意删除一个节点i，费用为$a_i$，并且与$a_i$距离为$1$的节点$j$的权值$$a_j增加$1$,与$i$距离为$2$的节点$K$的权值$$a_k增加$2$。之后删除的点必须与某个已被删除的点距离为$1$，其余删除规则与第一次一样。问：删除所有的点，费用的最大值的最小值是多少？">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给一颗$N$个节点的树，节点$i$有权值$a_i$。第一次可以随意删除一个节点i，费用为$a_i$，并且与$a_i$距离为$1$的节点$j$的权值$$a_j增加$1$,与$i$距离为$2$的节点$K$的权值$$a_k增加$2$。之后删除的点必须与某个已被删除的点距离为$1$，其余删除规则与第一次一样。问：删除所有的点，费用的最大值的最小值是多少？</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1 \leq N \leq 3 \times 10^5 \quad |a_i| \leq 10^9$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><h2 id="O-N-times-log-2N"><a href="#O-N-times-log-2N" class="headerlink" title="$O(N\times log_2N)$"></a>$O(N\times log_2N)$</h2><p>第一个被删除的点$i$的费用是$a_i$，与$i$相连的点$j$的费用是$a_j+1$，其余的点$k$的费用都是$a_k+2$（由树上无环的性质和删除的规则可以推出）。于是，我们只要枚举第一个删除的点，模拟一下删除的过程即可，需要一个数据结构来支持高效地插入、删除和查询最大值的操作，<code>multiset</code>可以满足要求。</p>
 <h2 id="O-N"><a href="#O-N" class="headerlink" title="$O(N)$"></a>$O(N)$</h2><p>上文已分析出：每个点的权值最多增加$2$。所以答案只能是$m,m+1,m+2$中的数。其中，$m$为初始权值的最大值。所以，我们在枚举第一个删除的点后模拟删除的过程中，只要记录剩余的集合中$m-1$的个数和$m$的个数即可。</p>

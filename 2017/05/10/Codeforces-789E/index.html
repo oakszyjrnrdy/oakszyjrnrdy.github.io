@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给K种浓度分别为$\frac{a_i}{1000}$的饮料，要求每种饮料用整数升，兑出浓度为$\frac{N}{1000}$的饮料。求最少要用几升饮料。 数据范围$0\leq n\leq 1000,1\leq k\leq 10^6$ $0\leq ai \leq 1000,a_i \in Z$ 做法由鸽巢原理，不同浓度的饮料最多有1001种。令K为不同浓度的种数。设每种饮料用了xi升，则有$$">
+<meta name="description" content="题目给K种浓度分别为$\frac{a_i}{1000}$的饮料，要求每种饮料用整数升，兑出浓度为$\frac{N}{1000}$的饮料。求最少要用几升饮料。">
 <meta name="keywords" content="Codeforces,BFS,建图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 789E">
 <meta property="og:url" content="http://yoursite.com/2017/05/10/Codeforces-789E/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给K种浓度分别为$\frac{a_i}{1000}$的饮料，要求每种饮料用整数升，兑出浓度为$\frac{N}{1000}$的饮料。求最少要用几升饮料。 数据范围$0\leq n\leq 1000,1\leq k\leq 10^6$ $0\leq ai \leq 1000,a_i \in Z$ 做法由鸽巢原理，不同浓度的饮料最多有1001种。令K为不同浓度的种数。设每种饮料用了xi升，则有$$">
-<meta property="og:updated_time" content="2017-05-10T10:54:01.178Z">
+<meta property="og:description" content="题目给K种浓度分别为$\frac{a_i}{1000}$的饮料，要求每种饮料用整数升，兑出浓度为$\frac{N}{1000}$的饮料。求最少要用几升饮料。">
+<meta property="og:updated_time" content="2017-08-17T19:21:02.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 789E">
-<meta name="twitter:description" content="题目给K种浓度分别为$\frac{a_i}{1000}$的饮料，要求每种饮料用整数升，兑出浓度为$\frac{N}{1000}$的饮料。求最少要用几升饮料。 数据范围$0\leq n\leq 1000,1\leq k\leq 10^6$ $0\leq ai \leq 1000,a_i \in Z$ 做法由鸽巢原理，不同浓度的饮料最多有1001种。令K为不同浓度的种数。设每种饮料用了xi升，则有$$">
+<meta name="twitter:description" content="题目给K种浓度分别为$\frac{a_i}{1000}$的饮料，要求每种饮料用整数升，兑出浓度为$\frac{N}{1000}$的饮料。求最少要用几升饮料。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给K种浓度分别为$\frac{a_i}{1000}$的饮料，要求每种饮料用整数升，兑出浓度为$\frac{N}{1000}$的饮料。求最少要用几升饮料。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$0\leq n\leq 1000,1\leq k\leq 10^6$</p>
 <p>$0\leq ai \leq 1000,a_i \in Z$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>由鸽巢原理，不同浓度的饮料最多有1001种。<br>令K为不同浓度的种数。设每种饮料用了xi升，则有<br>$$<br>\frac{\sum_{i=1}^Kx_i\times \frac{a_i}{1000}}{\sum_{i=1}^Kx_i}=\frac{N}{1000}<br>$$<br>化简后为<br>$$<br>\sum_{i=1}^Kx_i\times (N−a_i)=0<br>$$<br>原问题就规约为：从集合${N-a_i}$中取最少的数（每个数可以取任意次），使得他们的和为0。</p>

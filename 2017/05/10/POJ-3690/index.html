@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给$T$个$P \times Q$的矩阵。问其中有多少个在$N\times M$的矩阵中出现过。矩阵中元素只有2种。 数据范围$1\leq N,M\leq 1000,1\leq P,Q\leq 50,1 \leq T\leq 100$ 做法滚动Hash对$T$个矩阵进行二维的Hash，再对$N\times M$的矩阵中的$P\times Q$大小的子矩阵进行Hash,统计个数即可。 本题Has">
+<meta name="description" content="题目给$T$个$P \times Q$的矩阵。问其中有多少个在$N\times M$的矩阵中出现过。矩阵中元素只有2种。">
 <meta name="keywords" content="Hash,POJ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="POJ 3690">
 <meta property="og:url" content="http://yoursite.com/2017/05/10/POJ-3690/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给$T$个$P \times Q$的矩阵。问其中有多少个在$N\times M$的矩阵中出现过。矩阵中元素只有2种。 数据范围$1\leq N,M\leq 1000,1\leq P,Q\leq 50,1 \leq T\leq 100$ 做法滚动Hash对$T$个矩阵进行二维的Hash，再对$N\times M$的矩阵中的$P\times Q$大小的子矩阵进行Hash,统计个数即可。 本题Has">
-<meta property="og:updated_time" content="2017-05-10T10:31:08.994Z">
+<meta property="og:description" content="题目给$T$个$P \times Q$的矩阵。问其中有多少个在$N\times M$的矩阵中出现过。矩阵中元素只有2种。">
+<meta property="og:updated_time" content="2017-08-17T19:24:49.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ 3690">
-<meta name="twitter:description" content="题目给$T$个$P \times Q$的矩阵。问其中有多少个在$N\times M$的矩阵中出现过。矩阵中元素只有2种。 数据范围$1\leq N,M\leq 1000,1\leq P,Q\leq 50,1 \leq T\leq 100$ 做法滚动Hash对$T$个矩阵进行二维的Hash，再对$N\times M$的矩阵中的$P\times Q$大小的子矩阵进行Hash,统计个数即可。 本题Has">
+<meta name="twitter:description" content="题目给$T$个$P \times Q$的矩阵。问其中有多少个在$N\times M$的矩阵中出现过。矩阵中元素只有2种。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给$T$个$P \times Q$的矩阵。问其中有多少个在$N\times M$的矩阵中出现过。<br>矩阵中元素只有2种。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1\leq N,M\leq 1000,1\leq P,Q\leq 50,1 \leq T\leq 100$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><h2 id="滚动Hash"><a href="#滚动Hash" class="headerlink" title="滚动Hash"></a>滚动Hash</h2><p>对$T$个矩阵进行二维的Hash，再对$N\times M$的矩阵中的$P\times Q$大小的子矩阵进行Hash,统计个数即可。</p>
 <p>本题Hash用的是滚动Hash，行和列取的基数$B$不相同，并且模数取为$2^{64}$，用自然溢出省略取模操作。</p>

@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给$N$个点，求最近点对的距离的一半。 数据范围$N \leq 100000$ 做法分治。 先按x坐标分成左右2部分，则最近点对的位置有2种情况：  2个点都在左边或者都在右边 1个点在左边另1共个点在右边  对于情况1，直接递归计算即可。 对于情况2，由于我们已经递归计算了情况1，我们一定得到了一个初步的最小距离$d$。那么，在情况2中，对于距离大于$d$的点对就不用计算了。只需要计算离分划">
+<meta name="description" content="题目给$N$个点，求最近点对的距离的一半。">
 <meta name="keywords" content="HDOJ,平面分治">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDOJ 1007">
 <meta property="og:url" content="http://yoursite.com/2017/07/11/HDOJ-1007/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给$N$个点，求最近点对的距离的一半。 数据范围$N \leq 100000$ 做法分治。 先按x坐标分成左右2部分，则最近点对的位置有2种情况：  2个点都在左边或者都在右边 1个点在左边另1共个点在右边  对于情况1，直接递归计算即可。 对于情况2，由于我们已经递归计算了情况1，我们一定得到了一个初步的最小距离$d$。那么，在情况2中，对于距离大于$d$的点对就不用计算了。只需要计算离分划">
-<meta property="og:updated_time" content="2017-07-12T08:05:05.398Z">
+<meta property="og:description" content="题目给$N$个点，求最近点对的距离的一半。">
+<meta property="og:updated_time" content="2017-08-17T19:22:18.648Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDOJ 1007">
-<meta name="twitter:description" content="题目给$N$个点，求最近点对的距离的一半。 数据范围$N \leq 100000$ 做法分治。 先按x坐标分成左右2部分，则最近点对的位置有2种情况：  2个点都在左边或者都在右边 1个点在左边另1共个点在右边  对于情况1，直接递归计算即可。 对于情况2，由于我们已经递归计算了情况1，我们一定得到了一个初步的最小距离$d$。那么，在情况2中，对于距离大于$d$的点对就不用计算了。只需要计算离分划">
+<meta name="twitter:description" content="题目给$N$个点，求最近点对的距离的一半。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给$N$个点，求最近点对的距离的一半。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$N \leq 100000$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>分治。</p>
 <p>先按x坐标分成左右2部分，则最近点对的位置有2种情况：</p>

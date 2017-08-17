@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目长度为$N$的数列{a_i}的GCD Table定义为一个$N\times N$的表，表中元素$b_{ij}=gcd(a_i,a_j)$。现给你一个GCD Table中的所有数，要求输出原数列中的所有元素。 数据范围$N \leq 500$ 做法注意到：$gcd(a,b)≤min(a,b)$ 。 所以，最大的$gcd$值一定在原数列中出现，将此数从所给的数中去掉。剩下的数中，最大的数也一定在原">
+<meta name="description" content="题目长度为$N$的数列{a_i}的GCD Table定义为一个$N\times N$的表，表中元素$b_{ij}=gcd(a_i,a_j)$。现给你一个GCD Table中的所有数，要求输出原数列中的所有元素。">
 <meta name="keywords" content="Codeforces,数论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 582A">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/Codeforces-582A/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目长度为$N$的数列{a_i}的GCD Table定义为一个$N\times N$的表，表中元素$b_{ij}=gcd(a_i,a_j)$。现给你一个GCD Table中的所有数，要求输出原数列中的所有元素。 数据范围$N \leq 500$ 做法注意到：$gcd(a,b)≤min(a,b)$ 。 所以，最大的$gcd$值一定在原数列中出现，将此数从所给的数中去掉。剩下的数中，最大的数也一定在原">
-<meta property="og:updated_time" content="2017-08-17T15:52:05.872Z">
+<meta property="og:description" content="题目长度为$N$的数列{a_i}的GCD Table定义为一个$N\times N$的表，表中元素$b_{ij}=gcd(a_i,a_j)$。现给你一个GCD Table中的所有数，要求输出原数列中的所有元素。">
+<meta property="og:updated_time" content="2017-08-17T19:20:03.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 582A">
-<meta name="twitter:description" content="题目长度为$N$的数列{a_i}的GCD Table定义为一个$N\times N$的表，表中元素$b_{ij}=gcd(a_i,a_j)$。现给你一个GCD Table中的所有数，要求输出原数列中的所有元素。 数据范围$N \leq 500$ 做法注意到：$gcd(a,b)≤min(a,b)$ 。 所以，最大的$gcd$值一定在原数列中出现，将此数从所给的数中去掉。剩下的数中，最大的数也一定在原">
+<meta name="twitter:description" content="题目长度为$N$的数列{a_i}的GCD Table定义为一个$N\times N$的表，表中元素$b_{ij}=gcd(a_i,a_j)$。现给你一个GCD Table中的所有数，要求输出原数列中的所有元素。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>长度为$N$的数列{a_i}的GCD Table定义为一个$N\times N$的表，表中元素$b_{ij}=gcd(a_i,a_j)$。<br>现给你一个GCD Table中的所有数，要求输出原数列中的所有元素。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$N \leq 500$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>注意到：$gcd(a,b)≤min(a,b)$ 。</p>
 <p>所以，最大的$gcd$值一定在原数列中出现，将此数从所给的数中去掉。剩下的数中，最大的数也一定在原数列中。将此数从所给的数中去掉，再将此数与之前得出的原数列中的数的$gcd$从所给的数中去掉。不断重复此过程，直到所给的数都被去掉。</p>

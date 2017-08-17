@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/18/BZOJ-1597/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
 <meta property="og:description" content="题目Famer John准备扩大他的农场，他正在考虑$N$块长方形的土地。每块土地的价格是它的面积，但FJ可以同时购买多快土地。这些土地的价格是它们最大的长乘以它们最大的宽，但是土地的长宽不能交换。如果FJ买一块$3\times 5$的地和一块$5\times 3$的地，则他需要付$5\times 5=25$元。FJ希望买下所有的土地，但是他发现分组来买这些土地可以节省经费。他需要你帮助他找到最小">
-<meta property="og:updated_time" content="2017-08-17T16:11:47.834Z">
+<meta property="og:updated_time" content="2017-08-17T19:18:59.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ 1597">
 <meta name="twitter:description" content="题目Famer John准备扩大他的农场，他正在考虑$N$块长方形的土地。每块土地的价格是它的面积，但FJ可以同时购买多快土地。这些土地的价格是它们最大的长乘以它们最大的宽，但是土地的长宽不能交换。如果FJ买一块$3\times 5$的地和一块$5\times 3$的地，则他需要付$5\times 5=25$元。FJ希望买下所有的土地，但是他发现分组来买这些土地可以节省经费。他需要你帮助他找到最小">
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>Famer John准备扩大他的农场，他正在考虑$N$块长方形的土地。每块土地的价格是它的面积，但FJ可以同时购买多快土地。这些土地的价格是它们最大的长乘以它们最大的宽，但是土地的长宽不能交换。如果FJ买一块$3\times 5$的地和一块$5\times 3$的地，则他需要付$5\times 5=25$元。FJ希望买下所有的土地，但是他发现分组来买这些土地可以节省经费。他需要你帮助他找到最小的经费。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1\leq N \leq 50000 \quad 1\leq 长，宽\leq 10^6$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>观察到，较小的土地可以在买大土地的时候顺带买（送？）了。于是，将土地按$(w,h)$字典序从小到大排序，将小的土地去掉，类似单调栈的维护。剩下的土地全是按照$w$递增，$h$递减的顺序来排列了。</p>
 <p>用反证法，易证，取连续的土地一起买是最优的。</p>

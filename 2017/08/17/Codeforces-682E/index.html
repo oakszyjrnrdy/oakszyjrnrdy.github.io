@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目二维平面上，给$N$个整点（坐标都是整数），保证以这些点为顶点的三角形的面积不超过$S$。让你找出一个整点三角形（顶点不一定是给出的点），包含所有给出的点，且面积不超过$4S$。 数据范围$3\leq N \leq 5000 \quad |坐标|\leq 10^8$ 做法给出的点组成的最大的三角形的顶点记为$a,b,c$，面积记为$s$。用反证法，易证：以$a,b,c$为三边中点的三角形包含所">
+<meta name="description" content="题目二维平面上，给$N$个整点（坐标都是整数），保证以这些点为顶点的三角形的面积不超过$S$。让你找出一个整点三角形（顶点不一定是给出的点），包含所有给出的点，且面积不超过$4S$。">
 <meta name="keywords" content="Codeforces,凸包,旋转卡壳">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 682E">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/Codeforces-682E/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目二维平面上，给$N$个整点（坐标都是整数），保证以这些点为顶点的三角形的面积不超过$S$。让你找出一个整点三角形（顶点不一定是给出的点），包含所有给出的点，且面积不超过$4S$。 数据范围$3\leq N \leq 5000 \quad |坐标|\leq 10^8$ 做法给出的点组成的最大的三角形的顶点记为$a,b,c$，面积记为$s$。用反证法，易证：以$a,b,c$为三边中点的三角形包含所">
-<meta property="og:updated_time" content="2017-08-17T15:25:39.942Z">
+<meta property="og:description" content="题目二维平面上，给$N$个整点（坐标都是整数），保证以这些点为顶点的三角形的面积不超过$S$。让你找出一个整点三角形（顶点不一定是给出的点），包含所有给出的点，且面积不超过$4S$。">
+<meta property="og:updated_time" content="2017-08-17T19:20:26.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 682E">
-<meta name="twitter:description" content="题目二维平面上，给$N$个整点（坐标都是整数），保证以这些点为顶点的三角形的面积不超过$S$。让你找出一个整点三角形（顶点不一定是给出的点），包含所有给出的点，且面积不超过$4S$。 数据范围$3\leq N \leq 5000 \quad |坐标|\leq 10^8$ 做法给出的点组成的最大的三角形的顶点记为$a,b,c$，面积记为$s$。用反证法，易证：以$a,b,c$为三边中点的三角形包含所">
+<meta name="twitter:description" content="题目二维平面上，给$N$个整点（坐标都是整数），保证以这些点为顶点的三角形的面积不超过$S$。让你找出一个整点三角形（顶点不一定是给出的点），包含所有给出的点，且面积不超过$4S$。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>二维平面上，给$N$个整点（坐标都是整数），保证以这些点为顶点的三角形的面积不超过$S$。让你找出一个整点三角形（顶点不一定是给出的点），包含所有给出的点，且面积不超过$4S$。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$3\leq N \leq 5000 \quad |坐标|\leq 10^8$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>给出的点组成的最大的三角形的顶点记为$a,b,c$，面积记为$s$。用反证法，易证：以$a,b,c$为三边中点的三角形包含所有给出的点，记其面积为$S_{max}$。显然，上述两个三角形相似。所以:$4S\geq 4s = S_{max}$ 。故，上述两个三角形的后者即为所求。</p>
 <p>而最大的三角形可以用旋转卡壳法求出，复杂度为$O(N^2)$。</p>

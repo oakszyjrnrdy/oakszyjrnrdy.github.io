@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目有$N$个玩具，每个玩具长度为$c_i$ 。现在要把玩具全放到若干个箱子里，要求每个箱子里的玩具编号连续，并且任意$2$件玩具间都要有$1$个单位的空隙。即，对于装了编号为$[i,j]$的玩具的箱子，箱子的长度必须恰好为$j−i+\sum_{i≤k≤j}c_k$。而做一个长度为$x$的箱子所需的费用为$(x−L)^2$ ，$L$为常数。求最小的费用。 数据范围$1\leq N \leq 500">
+<meta name="description" content="题目有$N$个玩具，每个玩具长度为$c_i$ 。现在要把玩具全放到若干个箱子里，要求每个箱子里的玩具编号连续，并且任意$2$件玩具间都要有$1$个单位的空隙。即，对于装了编号为$[i,j]$的玩具的箱子，箱子的长度必须恰好为$j−i+\sum_{i≤k≤j}c_k$。而做一个长度为$x$的箱子所需的费用为$(x−L)^2$ ，$L$为常数。求最小的费用。">
 <meta name="keywords" content="BZOJ,斜率优化DP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ 1010">
 <meta property="og:url" content="http://yoursite.com/2017/08/18/BZOJ-1010/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目有$N$个玩具，每个玩具长度为$c_i$ 。现在要把玩具全放到若干个箱子里，要求每个箱子里的玩具编号连续，并且任意$2$件玩具间都要有$1$个单位的空隙。即，对于装了编号为$[i,j]$的玩具的箱子，箱子的长度必须恰好为$j−i+\sum_{i≤k≤j}c_k$。而做一个长度为$x$的箱子所需的费用为$(x−L)^2$ ，$L$为常数。求最小的费用。 数据范围$1\leq N \leq 500">
-<meta property="og:updated_time" content="2017-08-17T17:04:19.417Z">
+<meta property="og:description" content="题目有$N$个玩具，每个玩具长度为$c_i$ 。现在要把玩具全放到若干个箱子里，要求每个箱子里的玩具编号连续，并且任意$2$件玩具间都要有$1$个单位的空隙。即，对于装了编号为$[i,j]$的玩具的箱子，箱子的长度必须恰好为$j−i+\sum_{i≤k≤j}c_k$。而做一个长度为$x$的箱子所需的费用为$(x−L)^2$ ，$L$为常数。求最小的费用。">
+<meta property="og:updated_time" content="2017-08-17T19:18:45.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ 1010">
-<meta name="twitter:description" content="题目有$N$个玩具，每个玩具长度为$c_i$ 。现在要把玩具全放到若干个箱子里，要求每个箱子里的玩具编号连续，并且任意$2$件玩具间都要有$1$个单位的空隙。即，对于装了编号为$[i,j]$的玩具的箱子，箱子的长度必须恰好为$j−i+\sum_{i≤k≤j}c_k$。而做一个长度为$x$的箱子所需的费用为$(x−L)^2$ ，$L$为常数。求最小的费用。 数据范围$1\leq N \leq 500">
+<meta name="twitter:description" content="题目有$N$个玩具，每个玩具长度为$c_i$ 。现在要把玩具全放到若干个箱子里，要求每个箱子里的玩具编号连续，并且任意$2$件玩具间都要有$1$个单位的空隙。即，对于装了编号为$[i,j]$的玩具的箱子，箱子的长度必须恰好为$j−i+\sum_{i≤k≤j}c_k$。而做一个长度为$x$的箱子所需的费用为$(x−L)^2$ ，$L$为常数。求最小的费用。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>有$N$个玩具，每个玩具长度为$c_i$ 。现在要把玩具全放到若干个箱子里，要求每个箱子里的玩具编号连续，并且任意$2$件玩具间都要有$1$个单位的空隙。即，对于装了编号为$[i,j]$的玩具的箱子，箱子的长度必须恰好为$j−i+\sum_{i≤k≤j}c_k$。而做一个长度为$x$的箱子所需的费用为$(x−L)^2$ ，$L$为常数。求最小的费用。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1\leq N \leq 50000 \quad 1\leq L,c_i \leq 10^7$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>我们发现，除了给定的参数外，费用只和有几个玩具有关，于是，DP状态和转移方程如下：</p>
 <p>$dp[i]=$将前$i$个玩具放入箱子中的最小费用<br>$dp[0] = 0$<br>$dp[i]=min_{0\leq j &lt; i}(dp[j] + (i-j-1+\sum_{j&lt;k\leq i}c_k-L)^2)$</p>

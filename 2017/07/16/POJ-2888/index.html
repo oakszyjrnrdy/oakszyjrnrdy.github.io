@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目$N$个珠子组成的圆环，用$M$种颜色给每个珠子涂色。有$K$个限制条件：$a_i$和$b_i$不能相邻。若两种涂色方案旋转相同，则视为相同方案。问有多少种不同的涂色方案。 数据范围$N \leq 10^9 \quad M \leq 10 \quad K \leq \frac{M(M-1)}{2}$ 做法因为对于涂色有限则，所以不能用Polya定理，要用Burnside引理。 考虑旋转$k(0">
+<meta name="description" content="题目$N$个珠子组成的圆环，用$M$种颜色给每个珠子涂色。有$K$个限制条件：$a_i$和$b_i$不能相邻。若两种涂色方案旋转相同，则视为相同方案。问有多少种不同的涂色方案。">
 <meta name="keywords" content="POJ,Burnside">
 <meta property="og:type" content="article">
 <meta property="og:title" content="POJ 2888">
 <meta property="og:url" content="http://yoursite.com/2017/07/16/POJ-2888/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目$N$个珠子组成的圆环，用$M$种颜色给每个珠子涂色。有$K$个限制条件：$a_i$和$b_i$不能相邻。若两种涂色方案旋转相同，则视为相同方案。问有多少种不同的涂色方案。 数据范围$N \leq 10^9 \quad M \leq 10 \quad K \leq \frac{M(M-1)}{2}$ 做法因为对于涂色有限则，所以不能用Polya定理，要用Burnside引理。 考虑旋转$k(0">
-<meta property="og:updated_time" content="2017-07-16T09:19:34.822Z">
+<meta property="og:description" content="题目$N$个珠子组成的圆环，用$M$种颜色给每个珠子涂色。有$K$个限制条件：$a_i$和$b_i$不能相邻。若两种涂色方案旋转相同，则视为相同方案。问有多少种不同的涂色方案。">
+<meta property="og:updated_time" content="2017-08-17T19:24:00.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ 2888">
-<meta name="twitter:description" content="题目$N$个珠子组成的圆环，用$M$种颜色给每个珠子涂色。有$K$个限制条件：$a_i$和$b_i$不能相邻。若两种涂色方案旋转相同，则视为相同方案。问有多少种不同的涂色方案。 数据范围$N \leq 10^9 \quad M \leq 10 \quad K \leq \frac{M(M-1)}{2}$ 做法因为对于涂色有限则，所以不能用Polya定理，要用Burnside引理。 考虑旋转$k(0">
+<meta name="twitter:description" content="题目$N$个珠子组成的圆环，用$M$种颜色给每个珠子涂色。有$K$个限制条件：$a_i$和$b_i$不能相邻。若两种涂色方案旋转相同，则视为相同方案。问有多少种不同的涂色方案。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>$N$个珠子组成的圆环，用$M$种颜色给每个珠子涂色。有$K$个限制条件：$a_i$和$b_i$不能相邻。若两种涂色方案旋转相同，则视为相同方案。问有多少种不同的涂色方案。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$N \leq 10^9 \quad M \leq 10 \quad K \leq \frac{M(M-1)}{2}$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>因为对于涂色有限则，所以不能用Polya定理，要用Burnside引理。</p>
 <p>考虑旋转$k(0\leq k \leq N-1)$个珠子的置换$\sigma_k$。它的循环节长度为$gcd(N,k)$，故不动点的个数等价于“序列$a_1,a_2,\cdots,a_{gcd(N,k)},a_1$合法的涂色方案数”。</p>

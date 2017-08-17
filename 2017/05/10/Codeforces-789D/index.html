@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给N个点M条边的图，可能有自环，没有重边。问：有多少条路径能恰好经过M−2条边2次，并且经过其余2条边1次。路径的不同定义为：路径中的边集不同。 数据范围$0\leq N,M\leq 10^6$ 做法将M条边恰好经过2次可以转化为：将每条边变成2条边，这2M条边恰好经过一次，即走一个欧拉路。由于不存在度数为奇数的点，故欧拉路必存在。 原问题可以规约为：从上文的图中删去2条边，有多少种删法使得剩">
+<meta name="description" content="题目给N个点M条边的图，可能有自环，没有重边。问：有多少条路径能恰好经过M−2条边2次，并且经过其余2条边1次。路径的不同定义为：路径中的边集不同。">
 <meta name="keywords" content="Codeforces,欧拉路,BFS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 789D">
 <meta property="og:url" content="http://yoursite.com/2017/05/10/Codeforces-789D/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给N个点M条边的图，可能有自环，没有重边。问：有多少条路径能恰好经过M−2条边2次，并且经过其余2条边1次。路径的不同定义为：路径中的边集不同。 数据范围$0\leq N,M\leq 10^6$ 做法将M条边恰好经过2次可以转化为：将每条边变成2条边，这2M条边恰好经过一次，即走一个欧拉路。由于不存在度数为奇数的点，故欧拉路必存在。 原问题可以规约为：从上文的图中删去2条边，有多少种删法使得剩">
-<meta property="og:updated_time" content="2017-05-10T10:43:58.515Z">
+<meta property="og:description" content="题目给N个点M条边的图，可能有自环，没有重边。问：有多少条路径能恰好经过M−2条边2次，并且经过其余2条边1次。路径的不同定义为：路径中的边集不同。">
+<meta property="og:updated_time" content="2017-08-17T19:20:48.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 789D">
-<meta name="twitter:description" content="题目给N个点M条边的图，可能有自环，没有重边。问：有多少条路径能恰好经过M−2条边2次，并且经过其余2条边1次。路径的不同定义为：路径中的边集不同。 数据范围$0\leq N,M\leq 10^6$ 做法将M条边恰好经过2次可以转化为：将每条边变成2条边，这2M条边恰好经过一次，即走一个欧拉路。由于不存在度数为奇数的点，故欧拉路必存在。 原问题可以规约为：从上文的图中删去2条边，有多少种删法使得剩">
+<meta name="twitter:description" content="题目给N个点M条边的图，可能有自环，没有重边。问：有多少条路径能恰好经过M−2条边2次，并且经过其余2条边1次。路径的不同定义为：路径中的边集不同。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给N个点M条边的图，可能有自环，没有重边。问：有多少条路径能恰好经过M−2条边2次，并且经过其余2条边1次。路径的不同定义为：路径中的边集不同。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$0\leq N,M\leq 10^6$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>将M条边恰好经过2次可以转化为：将每条边变成2条边，这2M条边恰好经过一次，即走一个欧拉路。由于不存在度数为奇数的点，故欧拉路必存在。</p>
 <p>原问题可以规约为：从上文的图中删去2条边，有多少种删法使得剩下的图中仍存在欧拉路。</p>

@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="题目给$N$个点的树。问：有多少点对$(v,w)$的最短距离不超过$K$。 数据范围$N \leq 10000 \quad \quad K \leq 10000000$ 做法树上的点分治。 按树的重心分解可以使分解后的子树的最大点数不超过原来点数的一半，所以分治的层数有保障，为$O(log_2N)$。 重心分解之后，符合条件的点对$(v,w)$有三种情况：  v和w在同一个子树内。 v和w在不同的">
+<meta name="description" content="题目给$N$个点的树。问：有多少点对$(v,w)$的最短距离不超过$K$。">
 <meta name="keywords" content="POJ,树分治">
 <meta property="og:type" content="article">
 <meta property="og:title" content="POJ 1741">
 <meta property="og:url" content="http://yoursite.com/2017/07/10/POJ-1741/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给$N$个点的树。问：有多少点对$(v,w)$的最短距离不超过$K$。 数据范围$N \leq 10000 \quad \quad K \leq 10000000$ 做法树上的点分治。 按树的重心分解可以使分解后的子树的最大点数不超过原来点数的一半，所以分治的层数有保障，为$O(log_2N)$。 重心分解之后，符合条件的点对$(v,w)$有三种情况：  v和w在同一个子树内。 v和w在不同的">
+<meta property="og:description" content="题目给$N$个点的树。问：有多少点对$(v,w)$的最短距离不超过$K$。">
 <meta property="og:image" content="http://imglf0.nosdn.127.net/img/b0pmUXJIb2RvdXEraVFLYkQ1MVBGUURBeWo0SnhLTGVTM0Fqd1pPanhFVS9PWW1hdjJXY0FBPT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg">
-<meta property="og:updated_time" content="2017-07-10T10:33:51.106Z">
+<meta property="og:updated_time" content="2017-08-17T19:23:47.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ 1741">
-<meta name="twitter:description" content="题目给$N$个点的树。问：有多少点对$(v,w)$的最短距离不超过$K$。 数据范围$N \leq 10000 \quad \quad K \leq 10000000$ 做法树上的点分治。 按树的重心分解可以使分解后的子树的最大点数不超过原来点数的一半，所以分治的层数有保障，为$O(log_2N)$。 重心分解之后，符合条件的点对$(v,w)$有三种情况：  v和w在同一个子树内。 v和w在不同的">
+<meta name="twitter:description" content="题目给$N$个点的树。问：有多少点对$(v,w)$的最短距离不超过$K$。">
 <meta name="twitter:image" content="http://imglf0.nosdn.127.net/img/b0pmUXJIb2RvdXEraVFLYkQ1MVBGUURBeWo0SnhLTGVTM0Fqd1pPanhFVS9PWW1hdjJXY0FBPT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg">
 
 
@@ -378,6 +378,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给$N$个点的树。问：有多少点对$(v,w)$的最短距离不超过$K$。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$N \leq 10000 \quad \quad K \leq 10000000$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>树上的点分治。</p>
 <p>按树的重心分解可以使分解后的子树的最大点数不超过原来点数的一半，所以分治的层数有保障，为$O(log_2N)$。</p>

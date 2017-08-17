@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给一棵有N个节点的树，边权非负。有M个操作。 操作有2种：  指定子树中的边权都加上某个数。 输出节点x到节点y的路径上的边权的平方和。  数据范围$ 0 \leq N, M \leq 200000 $ 做法下面的2种做法，一般都是处理点权的。对于边的边权，要将其转化为终点t的点权。 下面讲一下如何用线段树维护区间平方和。 对于区间[l, r)，其中朝向叶子的边的个数为np，朝向根的边的个数n">
+<meta name="description" content="题目给一棵有N个节点的树，边权非负。有M个操作。 操作有2种：  指定子树中的边权都加上某个数。 输出节点x到节点y的路径上的边权的平方和。">
 <meta name="keywords" content="DFS序,LCA,线段树,树链剖分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017JLU校赛-H">
 <meta property="og:url" content="http://yoursite.com/2017/05/30/2017JLU校赛-H/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给一棵有N个节点的树，边权非负。有M个操作。 操作有2种：  指定子树中的边权都加上某个数。 输出节点x到节点y的路径上的边权的平方和。  数据范围$ 0 \leq N, M \leq 200000 $ 做法下面的2种做法，一般都是处理点权的。对于边的边权，要将其转化为终点t的点权。 下面讲一下如何用线段树维护区间平方和。 对于区间[l, r)，其中朝向叶子的边的个数为np，朝向根的边的个数n">
-<meta property="og:updated_time" content="2017-05-30T07:27:10.882Z">
+<meta property="og:description" content="题目给一棵有N个节点的树，边权非负。有M个操作。 操作有2种：  指定子树中的边权都加上某个数。 输出节点x到节点y的路径上的边权的平方和。">
+<meta property="og:updated_time" content="2017-08-17T19:18:25.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017JLU校赛-H">
-<meta name="twitter:description" content="题目给一棵有N个节点的树，边权非负。有M个操作。 操作有2种：  指定子树中的边权都加上某个数。 输出节点x到节点y的路径上的边权的平方和。  数据范围$ 0 \leq N, M \leq 200000 $ 做法下面的2种做法，一般都是处理点权的。对于边的边权，要将其转化为终点t的点权。 下面讲一下如何用线段树维护区间平方和。 对于区间[l, r)，其中朝向叶子的边的个数为np，朝向根的边的个数n">
+<meta name="twitter:description" content="题目给一棵有N个节点的树，边权非负。有M个操作。 操作有2种：  指定子树中的边权都加上某个数。 输出节点x到节点y的路径上的边权的平方和。">
 
 
 
@@ -381,6 +381,7 @@
 <li>指定子树中的边权都加上某个数。</li>
 <li>输出节点x到节点y的路径上的边权的平方和。</li>
 </ol>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$ 0 \leq N, M \leq 200000 $</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>下面的2种做法，一般都是处理点权的。对于边<s, t="">的边权，要将其转化为终点t的点权。</s,></p>
 <p>下面讲一下如何用线段树维护区间平方和。</p>
