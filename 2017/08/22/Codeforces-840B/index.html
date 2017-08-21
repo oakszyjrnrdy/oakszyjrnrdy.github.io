@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给$N$个点$M$条边的连通图，每个点$i$上有权值$d[i]\in{-1,0,1}$。要你选出一些边保留，其余边删去，使得每个$d\neq-1$点的度数模$2$等于$d[i]$，权值为$-1$的点没有要求。 数据范围$1\leq N \leq 3\times 10^5 \quad N-1\leq M\leq 3\times10^5$ 做法构造性证明如下结论：本题有解当且仅当能通过将权值为$-">
+<meta name="description" content="题目给$N$个点$M$条边的连通图，每个点$i$上有权值$d[i]\in{-1,0,1}$。要你选出一些边保留，其余边删去，使得每个$d\neq-1$点的度数模$2$等于$d[i]$，权值为$-1$的点没有要求。">
 <meta name="keywords" content="Codeforces,构造">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 840B">
 <meta property="og:url" content="http://yoursite.com/2017/08/22/Codeforces-840B/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给$N$个点$M$条边的连通图，每个点$i$上有权值$d[i]\in{-1,0,1}$。要你选出一些边保留，其余边删去，使得每个$d\neq-1$点的度数模$2$等于$d[i]$，权值为$-1$的点没有要求。 数据范围$1\leq N \leq 3\times 10^5 \quad N-1\leq M\leq 3\times10^5$ 做法构造性证明如下结论：本题有解当且仅当能通过将权值为$-">
-<meta property="og:updated_time" content="2017-08-21T18:36:25.033Z">
+<meta property="og:description" content="题目给$N$个点$M$条边的连通图，每个点$i$上有权值$d[i]\in{-1,0,1}$。要你选出一些边保留，其余边删去，使得每个$d\neq-1$点的度数模$2$等于$d[i]$，权值为$-1$的点没有要求。">
+<meta property="og:updated_time" content="2017-08-21T18:38:51.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 840B">
-<meta name="twitter:description" content="题目给$N$个点$M$条边的连通图，每个点$i$上有权值$d[i]\in{-1,0,1}$。要你选出一些边保留，其余边删去，使得每个$d\neq-1$点的度数模$2$等于$d[i]$，权值为$-1$的点没有要求。 数据范围$1\leq N \leq 3\times 10^5 \quad N-1\leq M\leq 3\times10^5$ 做法构造性证明如下结论：本题有解当且仅当能通过将权值为$-">
+<meta name="twitter:description" content="题目给$N$个点$M$条边的连通图，每个点$i$上有权值$d[i]\in{-1,0,1}$。要你选出一些边保留，其余边删去，使得每个$d\neq-1$点的度数模$2$等于$d[i]$，权值为$-1$的点没有要求。">
 
 
 
@@ -376,6 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给$N$个点$M$条边的连通图，每个点$i$上有权值$d[i]\in{-1,0,1}$。要你选出一些边保留，其余边删去，使得每个$d\neq-1$点的度数模$2$等于$d[i]$，权值为$-1$的点没有要求。</p>
+<a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1\leq N \leq 3\times 10^5 \quad N-1\leq M\leq 3\times10^5$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>构造性证明如下结论：本题有解当且仅当能通过将权值为$-1$的点的权值变为$0$或者$1$，使得所有点的权值和为偶数。</p>
 <p>充分性：证逆否命题。若度数和只能是奇数，则显然无解。因为最后答案中的每个连通块的度数都是偶数，和必然是偶数。</p>
