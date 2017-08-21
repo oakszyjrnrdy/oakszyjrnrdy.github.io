@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目$f(n,k):=k\times[n为k进制下的回文数]+[n不是k进制下的回文数]$ 求$\sum{i=L}^{R} \sum{j=l}^{r}f(i,j)$">
+<meta name="description" content="题目$f(n,k):=k\times[n为k进制下的回文数]+[n不是k进制下的回文数]$ 求$\sum_{i=L}^{R} \sum_{j=l}^{r}f(i,j)$">
 <meta name="keywords" content="HDOJ,数位DP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDOJ 6156">
 <meta property="og:url" content="http://yoursite.com/2017/08/21/HDOJ-6156/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目$f(n,k):=k\times[n为k进制下的回文数]+[n不是k进制下的回文数]$ 求$\sum{i=L}^{R} \sum{j=l}^{r}f(i,j)$">
-<meta property="og:updated_time" content="2017-08-21T15:29:59.028Z">
+<meta property="og:description" content="题目$f(n,k):=k\times[n为k进制下的回文数]+[n不是k进制下的回文数]$ 求$\sum_{i=L}^{R} \sum_{j=l}^{r}f(i,j)$">
+<meta property="og:updated_time" content="2017-08-21T16:47:42.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDOJ 6156">
-<meta name="twitter:description" content="题目$f(n,k):=k\times[n为k进制下的回文数]+[n不是k进制下的回文数]$ 求$\sum{i=L}^{R} \sum{j=l}^{r}f(i,j)$">
+<meta name="twitter:description" content="题目$f(n,k):=k\times[n为k进制下的回文数]+[n不是k进制下的回文数]$ 求$\sum_{i=L}^{R} \sum_{j=l}^{r}f(i,j)$">
 
 
 
@@ -376,7 +376,7 @@
 
       
         <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>$f(n,k):=k\times[n为k进制下的回文数]+[n不是k进制下的回文数]$</p>
-<p>求$\sum<em>{i=L}^{R} \sum</em>{j=l}^{r}f(i,j)$</p>
+<p>求$\sum_{i=L}^{R} \sum_{j=l}^{r}f(i,j)$</p>
 <a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1\leq L,R\leq 10^9 \quad 2\leq l,r\leq 36$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>枚举进制$K$,数位DP或者直接$O(log_K)$地算出$[L, R]$有多少$K$进制下的回文数。</p>
