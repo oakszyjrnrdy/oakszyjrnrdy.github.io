@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="题目给$N$个数${a_i}$，Alice和Bob轮流选进行最优操作。一次操作定义为：取一个数$p^k(p为质数,k&amp;gt;0)$，这个数要求能被某个$a_i$整除。然后将这些数中整除$p^k$的数都除以$p^k$。Alice先手，问谁嬴。">
+<meta name="description" content="题目给$N$个数${a_i}$，Alice和Bob轮流选进行最优操作。一次操作定义为：取一个数$p^k(p为质数,k&amp;gt;0)$，这个数要求能被某个$a_i$整除。然后将这些数中整除$p^k$的数都除以$p^k$。若不能选出一个这样的数$p^k$，则输。Alice先手，问谁嬴。">
 <meta name="keywords" content="Codeforces,博弈">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Codeforces 851E">
 <meta property="og:url" content="http://yoursite.com/2017/09/06/Codeforces-851E/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
-<meta property="og:description" content="题目给$N$个数${a_i}$，Alice和Bob轮流选进行最优操作。一次操作定义为：取一个数$p^k(p为质数,k&amp;gt;0)$，这个数要求能被某个$a_i$整除。然后将这些数中整除$p^k$的数都除以$p^k$。Alice先手，问谁嬴。">
-<meta property="og:updated_time" content="2017-09-06T12:49:46.640Z">
+<meta property="og:description" content="题目给$N$个数${a_i}$，Alice和Bob轮流选进行最优操作。一次操作定义为：取一个数$p^k(p为质数,k&amp;gt;0)$，这个数要求能被某个$a_i$整除。然后将这些数中整除$p^k$的数都除以$p^k$。若不能选出一个这样的数$p^k$，则输。Alice先手，问谁嬴。">
+<meta property="og:updated_time" content="2017-09-06T15:34:36.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Codeforces 851E">
-<meta name="twitter:description" content="题目给$N$个数${a_i}$，Alice和Bob轮流选进行最优操作。一次操作定义为：取一个数$p^k(p为质数,k&amp;gt;0)$，这个数要求能被某个$a_i$整除。然后将这些数中整除$p^k$的数都除以$p^k$。Alice先手，问谁嬴。">
+<meta name="twitter:description" content="题目给$N$个数${a_i}$，Alice和Bob轮流选进行最优操作。一次操作定义为：取一个数$p^k(p为质数,k&amp;gt;0)$，这个数要求能被某个$a_i$整除。然后将这些数中整除$p^k$的数都除以$p^k$。若不能选出一个这样的数$p^k$，则输。Alice先手，问谁嬴。">
 
 
 
@@ -375,7 +375,7 @@
       
 
       
-        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给$N$个数${a_i}$，Alice和Bob轮流选进行最优操作。<br>一次操作定义为：取一个数$p^k(p为质数,k&gt;0)$，这个数要求能被某个$a_i$整除。然后将这些数中整除$p^k$的数都除以$p^k$。<br>Alice先手，问谁嬴。</p>
+        <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给$N$个数${a_i}$，Alice和Bob轮流选进行最优操作。<br>一次操作定义为：取一个数$p^k(p为质数,k&gt;0)$，这个数要求能被某个$a_i$整除。然后将这些数中整除$p^k$的数都除以$p^k$。<br>若不能选出一个这样的数$p^k$，则输。<br>Alice先手，问谁嬴。</p>
 <a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1\le N \le 100 \quad 1\le a_i \le 10^9$</p>
 <h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>发现：对不同质数而言，游戏是相互独立的。并且，对于不同质数，游戏满足<strong>SG组合游戏</strong>的性质。所以，整个游戏就是若干个SG组合游戏的<strong>游戏和</strong>，可以转为<strong>NIM游戏</strong>来做。<br>然后问题就变成了：求出每种质数$p$单独存在时的游戏的<strong>SG值</strong>。可以通过状态压缩来表示当前游戏的状态，以方便在状态间相互转移。具体实现为：用一个整数$mask$来压缩状态。若一个数$a$能被$p^k$整除但不能被$p^{k+1}$整除的时候，则置$mask$的第$k-1$位为1，即<code>mask |= 1 &lt;&lt; (k - 1)</code>。对所有整除$p^k$的数都除以$p^k$可以实现为：<code>newMask = (mask &gt;&gt; k) | (mask &amp; ((1 &lt;&lt; (k - 1)) - 1))</code>。</p>
@@ -434,6 +434,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/07/Codeforces-851D/" rel="prev" title="Codeforces 851D">
+                Codeforces 851D <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -507,7 +511,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">39</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
