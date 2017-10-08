@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/04/LOJ-6175/index.html">
 <meta property="og:site_name" content="Cainiao&#39;s Home">
 <meta property="og:description" content="题目一棵 $N$个点的有根树，$1$ 号点为根。树上每个节点 $i$ 对应一个值$k_i$。每个点都有一个颜色，初始的时候所有点都是白色的，你需要通过一系列操作使得最终每个点变成黑色。 每次操作需要选择一个节点$i$，$i$必须是白色的，然后$i$到根的链上（包括节点$i$与根）所有与节点$i$距离小于$k_i$的点都会变黑，已经是黑的点保持为黑。问最少使用几次操作能把整棵树变黑。">
-<meta property="og:updated_time" content="2017-10-04T18:11:41.584Z">
+<meta property="og:updated_time" content="2017-10-04T18:17:07.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOJ 6175">
 <meta name="twitter:description" content="题目一棵 $N$个点的有根树，$1$ 号点为根。树上每个节点 $i$ 对应一个值$k_i$。每个点都有一个颜色，初始的时候所有点都是白色的，你需要通过一系列操作使得最终每个点变成黑色。 每次操作需要选择一个节点$i$，$i$必须是白色的，然后$i$到根的链上（包括节点$i$与根）所有与节点$i$距离小于$k_i$的点都会变黑，已经是黑的点保持为黑。问最少使用几次操作能把整棵树变黑。">
@@ -379,9 +379,9 @@
 <p>每次操作需要选择一个节点$i$，$i$必须是白色的，然后$i$到根的链上（包括节点$i$与根）所有与节点$i$距离小于$k_i$的点都会变黑，已经是黑的点保持为黑。问最少使用几次操作能把整棵树变黑。</p>
 <a id="more"></a>
 <h1 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h1><p>$1\le N\le 10^5 \quad 1\le k_i\le 10^5$</p>
-<h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>这个问题的简化版是在序列上的：选择最小的区间，使得能够完全覆盖某一段区域。贪心的策略是：左端点为端点的最小值的的区间必选，有多个的话，选右端点最右的。之后的区间选择左端点在已覆盖的最右点左边，且右端点最右的区间。现在问题变到了树上，贪心的策略不变。难点在于如何实现这个贪心。</p>
+<h1 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h1><p>这个问题的简化版是在序列上的：选择最少的区间，使得能够完全覆盖某一段区域。贪心的策略是：左端点为端点的最小值的的区间必选，有多个的话，选右端点最右的。之后的区间选择左端点在已覆盖的最右点左边，且右端点最右的区间。现在问题变到了树上，贪心的策略不变。难点在于如何实现这个贪心。</p>
 <p>这题还有一个有趣的地方是：在染色的时候，我们不一定非要选白色的点来染色。因为在做染色操作的点一定的情况下，我们总可以找到一种顺序（比如：从深度小的点开始染色）重构染色操作，使得满足题目中“每次选白色的点染色”的条件。</p>
-<p>具体实现是：对每个点$v$，记录对$v$为根的子树中所有的点染色后所能所能染到的最小深度$f[v]$，再记录以$v$为根的子树中以染色的点最小能染到的深度$g[v]$。这两组信息可以用树DP处理出来。然后，对于点$v,u$，v是u的父亲，如果$min_u(g[u])&gt;depth[v]$，那么为了染色点$v$，只能从$v$为根的子树中选一个染色后$v$也会被染色的点来染色。这时候就体现出贪心了：选择那个染色之后，深度最小的点的深度最小，的点来染色。这样，染色之后，$g[v]$就等于$f[v]$了。解题主要靠$g[]$数组，$f[]$数组起辅助作用。</p>
+<p>具体实现是：对每个点$v$，记录对$v$为根的子树中所有的点染色后所能所能染到的最小深度$f[v]$，再记录以$v$为根的子树中已染色的点最小能染到的深度$g[v]$。这两组信息可以用树DP处理出来。然后，对于点$v,u$，v是u的父亲，如果$min_u(g[u])&gt;depth[v]$，那么为了染色点$v$，只能从$v$为根的子树中选一个染色后$v$也会被染色的点来染色。这时候就体现出贪心了：选择那个染色之后，使得被染色的点中深度最小的点的深度最小，的点来染色。这样，染色之后，$g[v]$就等于$f[v]$了。解题主要靠$g[]$数组，$f[]$数组起辅助作用。</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_N = <span class="number">1e5</span> + <span class="number">5</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> N;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; G[MAX_N];</div><div class="line"><span class="keyword">int</span> k[MAX_N];</div><div class="line"><span class="keyword">int</span> f[MAX_N];</div><div class="line"><span class="keyword">int</span> g[MAX_N];</div><div class="line"><span class="keyword">int</span> dep[MAX_N];</div><div class="line"><span class="keyword">int</span> ans;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> t)</span></span></div><div class="line">&#123;</div><div class="line">  G[s].push_back(t);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> d)</span></span></div><div class="line">&#123;</div><div class="line">  dep[v] = d;</div><div class="line">  f[v] = d - k[v] + <span class="number">1</span>;</div><div class="line">  g[v] = INT_MAX;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> u : G[v]) &#123;</div><div class="line">    dfs(u, d + <span class="number">1</span>);</div><div class="line">    f[v] = min(f[v], f[u]);</div><div class="line">    g[v] = min(g[v], g[u]);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span> (g[v] &gt; d) &#123;</div><div class="line">    ++ans;</div><div class="line">    g[v] = f[v];</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> linjian</span></div><div class="line">freopen(<span class="string">"C:\\Users\\linjian\\Documents\\in.txt"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; N; ++i) &#123;</div><div class="line">    <span class="keyword">int</span> p;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;p);</div><div class="line">    p--;</div><div class="line">    addEdge(p, i);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;k[i]);</div><div class="line">  &#125;</div><div class="line">  dfs(<span class="number">0</span>, <span class="number">0</span>);</div><div class="line">  <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
@@ -437,6 +437,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/08/Codeforces-869C/" rel="prev" title="Codeforces 869C">
+                Codeforces 869C <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -510,7 +514,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -523,7 +527,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-count">41</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
